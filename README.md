@@ -2,11 +2,11 @@
 Survival Meals Expanded, a mod for RimWorld created by Spectrosity and co-edited by Dr_Zhivago
 
 # Changelog
-**v2.0.0**
+**v1.1.0.0**
 ```
 Changes_go_here
 ```
-**v1.0.0**
+**v1.0.0.0**
 ```
 Initial release
 ```
