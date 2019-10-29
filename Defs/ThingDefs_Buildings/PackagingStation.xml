@@ -7,7 +7,7 @@
 		<graphicData>
 			<texPath>Things/Building/SPC_PackagingStation</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(1,1.75)</drawSize>
+			<drawSize>(2,2)</drawSize>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
 				<cornerTR>Damage/Corner</cornerTR>
@@ -15,6 +15,8 @@
 				<cornerBR>Damage/Corner</cornerBR>
 			</damageData>
 		</graphicData>
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
 		<costList>
 			<Steel>125</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
@@ -33,6 +35,9 @@
 		<pathCost>70</pathCost>
 		<rotatable>true</rotatable>
 		<tickerType>Rare</tickerType>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<statBases>
 			<WorkToBuild>1800</WorkToBuild>
@@ -42,15 +47,16 @@
 			<Mass>3</Mass>
 		</statBases>
 		<inspectorTabs>
-      		<li>ITab_Bills</li>
-    	</inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
 		<comps>
 			<li Class="CompProperties_Forbiddable" />
 			<li Class="CompProperties_Breakdownable" />
-		    <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <shortCircuitInRain>true</shortCircuitInRain>
-        <basePowerConsumption>125</basePowerConsumption>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>125</basePowerConsumption>
+			</li>
 		</comps>
 		<researchPrerequisites>
 			<li>SPC_PackagingStation</li>
