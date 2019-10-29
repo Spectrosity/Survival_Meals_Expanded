@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
 	<ThingDef ParentName="MealBase">
 		<defName>SPC_FineMealSurvivalPack</defName>
 		<label>fine packaged survival meal</label>
@@ -11,19 +12,24 @@
 		<statBases>
 			<DeteriorationRate>0.25</DeteriorationRate>
 			<MarketValue>48</MarketValue>
-			<Mass>0.3</Mass>
 			<WorkToMake>650</WorkToMake>
 			<Nutrition>0.95</Nutrition>
 		</statBases>
 		<ingestible>
-			<preferability>MealFine</preferability>
 			<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
 			<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
 			<ingestEffect>EatVegetarian</ingestEffect>
 			<ingestSound>Meal_Eat</ingestSound>
+			<preferability>MealFine</preferability>
 			<tasteThought>AteFineMeal</tasteThought>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>SPC_FineMealSurvivalPack_Hediff</hediffDef>
+				</li>
+			</outcomeDoers>
 		</ingestible>
 	</ThingDef>
+
 	<ThingDef ParentName="MealBase">
 		<defName>SPC_LavishMealSurvivalPack</defName>
 		<label>lavish packaged survival meal</label>
@@ -35,17 +41,20 @@
 		<statBases>
 			<DeteriorationRate>0.20</DeteriorationRate>
 			<MarketValue>96</MarketValue>
-			<Mass>0.3</Mass>
 			<WorkToMake>950</WorkToMake>
 			<Nutrition>1.0</Nutrition>
 		</statBases>
 		<ingestible>
 			<preferability>MealLavish</preferability>
-			<optimalityOffsetHumanlikes>10</optimalityOffsetHumanlikes>
-			<optimalityOffsetFeedingAnimals>10</optimalityOffsetFeedingAnimals>
+			<tasteThought>AteLavishMeal</tasteThought>
 			<ingestEffect>EatVegetarian</ingestEffect>
 			<ingestSound>Meal_Eat</ingestSound>
-			<tasteThought>AteLavishMeal</tasteThought>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>SPC_LavishMealSurvivalPack_Hediff</hediffDef>
+				</li>
+			</outcomeDoers>
 		</ingestible>
 	</ThingDef>
+
 </Defs>

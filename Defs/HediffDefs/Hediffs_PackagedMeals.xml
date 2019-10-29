@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HediffDef>
+        <defName>SPC_FineMealSurvivalPack_Hediff</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>stuffed from fine survival meal</label>
+        <labelNoun>a stuffed belly</labelNoun>
+        <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <initialSeverity>1</initialSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-3.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <hungerRateFactorOffset>-0.25</hungerRateFactorOffset>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SPC_LavishMealSurvivalPack_Hediff</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>stuffed from lavish survival meal</label>
+        <labelNoun>a stuffed belly</labelNoun>
+        <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <initialSeverity>1</initialSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-3.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <hungerRateFactorOffset>-0.33</hungerRateFactorOffset>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>
