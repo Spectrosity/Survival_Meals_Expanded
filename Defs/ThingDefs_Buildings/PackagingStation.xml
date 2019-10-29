@@ -57,6 +57,16 @@
 				<shortCircuitInRain>true</shortCircuitInRain>
 				<basePowerConsumption>125</basePowerConsumption>
 			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>50</fuelConsumptionRate>
+				<fuelCapacity>100.0</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>SPC_MealPackagingMaterial</li>
+					</thingDefs>
+				</fuelFilter>
+				<consumerFuelOnlyWhenUsed>true</consumerFuelOnlyWhenUsed>
+			</li>
 		</comps>
 		<researchPrerequisites>
 			<li>SPC_PackagingStation</li>
