@@ -13,7 +13,7 @@
 			<MarketValue>48</MarketValue>
 			<Mass>0.3</Mass>
 			<WorkToMake>650</WorkToMake>
-			<Nutrition>1</Nutrition>
+			<Nutrition>0.95</Nutrition>
 		</statBases>
 		<ingestible>
 			<preferability>MealFine</preferability>
@@ -37,7 +37,7 @@
 			<MarketValue>96</MarketValue>
 			<Mass>0.3</Mass>
 			<WorkToMake>950</WorkToMake>
-			<Nutrition>1.35</Nutrition>
+			<Nutrition>1.0</Nutrition>
 		</statBases>
 		<ingestible>
 			<preferability>MealLavish</preferability>

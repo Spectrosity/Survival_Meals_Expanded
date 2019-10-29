@@ -3,11 +3,11 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>SPC_PackagingStation</defName>
 		<label>Packaging Station</label>
-		<description>A vacuum sealing machine used to make packaged survival meals. Very  loud.</description>
+		<description>A vacuum sealing machine used to make packaged survival meals. Very loud.</description>
 		<graphicData>
 			<texPath>Things/Building/SPC_PackagingStation</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(1,2)</drawSize>
+			<drawSize>(1,1.75)</drawSize>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
 				<cornerTR>Damage/Corner</cornerTR>
@@ -23,7 +23,7 @@
 		<thingCategories>
 			<li>BuildingsProduction</li>
 		</thingCategories>
-		<constructEffect>ConstructWood</constructEffect>
+		<constructEffect>ConstructMetal</constructEffect>
 		<altitudeLayer>Building</altitudeLayer>
 		<fillPercent>0.5</fillPercent>
 		<useHitPoints>True</useHitPoints>
@@ -33,6 +33,7 @@
 		<pathCost>70</pathCost>
 		<rotatable>true</rotatable>
 		<tickerType>Rare</tickerType>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<statBases>
 			<WorkToBuild>1800</WorkToBuild>
 			<MaxHitPoints>145</MaxHitPoints>
@@ -40,9 +41,16 @@
 			<Cleanliness>-10</Cleanliness>
 			<Mass>3</Mass>
 		</statBases>
+		<inspectorTabs>
+      		<li>ITab_Bills</li>
+    	</inspectorTabs>
 		<comps>
 			<li Class="CompProperties_Forbiddable" />
 			<li Class="CompProperties_Breakdownable" />
+		    <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>125</basePowerConsumption>
 		</comps>
 		<researchPrerequisites>
 			<li>SPC_PackagingStation</li>
