@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<RecipeDef ParentName="CookMealBase">
+		<defName>SPC_CookFineMealSurvival</defName>
+		<label>cook fine packaged survival meal</label>
+		<description>Prepare a fine packaged survival meal from a combination of meat and plant ingredients. Less of the ingredients are wasted in the preservation process than a normal survival meal.</description>
+		<jobString>Cooking fine survival meal.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+						<li>AnimalProductRaw</li>
+					</categories>
+				</filter>
+				<count>0.25</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>0.25</count>
+			</li>
+		</ingredients>
+		<products>
+			<SPC_FineMealSurvivalPack>1</SPC_FineMealSurvivalPack>
+		</products>
+		<skillRequirements>
+			<Cooking>9</Cooking>
+		</skillRequirements>
+		<researchPrerequisite>SPC_FinePackagedSurvivalMeal</researchPrerequisite>
+	</RecipeDef>
+	<RecipeDef ParentName="CookMealBase">
+		<defName>SPC_CookLavishMealSurvival</defName>
+		<label>cook lavish packaged survival meal</label>
+		<description>Prepare a fine packaged survival meal from a combination of meat and plant ingredients. Less of the ingredients are wasted in the preservation process than a normal survival meal.</description>
+		<jobString>Cooking lavish survival meal.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+						<li>AnimalProductRaw</li>
+					</categories>
+				</filter>
+				<count>0.30</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>0.30</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>Leathers</li>
+					</categories>
+					<disallowedThingDefs>
+						<li>Leather_Thrumbo</li>
+					</disallowedThingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+			<SPC_LavishMealSurvivalPack>1</SPC_LavishMealSurvivalPack>
+		</products>
+		<skillRequirements>
+			<Cooking>10</Cooking>
+		</skillRequirements>
+		<researchPrerequisite>SPC_LavishPackagedSurvivalMeal</researchPrerequisite>
+	</RecipeDef>
+</Defs>

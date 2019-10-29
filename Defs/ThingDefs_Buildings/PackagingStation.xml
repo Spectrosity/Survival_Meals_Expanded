@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>SPC_PackagingStation</defName>
+		<label>Packaging Station</label>
+		<description>A vacuum sealing machine used to make packaged survival meals. Very  loud.</description>
+		<graphicData>
+			<texPath>Things/Building/SPC_PackagingStation</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,2)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<costList>
+			<Steel>125</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<constructEffect>ConstructWood</constructEffect>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<designationCategory>Production</designationCategory>
+		<size>(1,1)</size>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<rotatable>true</rotatable>
+		<tickerType>Rare</tickerType>
+		<statBases>
+			<WorkToBuild>1800</WorkToBuild>
+			<MaxHitPoints>145</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Cleanliness>-10</Cleanliness>
+			<Mass>3</Mass>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+			<li Class="CompProperties_Breakdownable" />
+		</comps>
+		<researchPrerequisites>
+			<li>SPC_PackagingStation</li>
+		</researchPrerequisites>
+	</ThingDef>
+</Defs>
