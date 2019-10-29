@@ -12,6 +12,7 @@
 		<statBases>
 			<DeteriorationRate>0.25</DeteriorationRate>
 			<MarketValue>48</MarketValue>
+			<Mass>0.3</Mass>
 			<WorkToMake>650</WorkToMake>
 			<Nutrition>0.95</Nutrition>
 		</statBases>
@@ -41,6 +42,7 @@
 		<statBases>
 			<DeteriorationRate>0.20</DeteriorationRate>
 			<MarketValue>96</MarketValue>
+			<Mass>0.3</Mass>
 			<WorkToMake>950</WorkToMake>
 			<Nutrition>1.0</Nutrition>
 		</statBases>
