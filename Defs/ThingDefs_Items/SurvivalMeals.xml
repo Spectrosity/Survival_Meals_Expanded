@@ -47,10 +47,12 @@
 			<Nutrition>1.0</Nutrition>
 		</statBases>
 		<ingestible>
-			<preferability>MealLavish</preferability>
-			<tasteThought>AteLavishMeal</tasteThought>
+			<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
 			<ingestEffect>EatVegetarian</ingestEffect>
 			<ingestSound>Meal_Eat</ingestSound>
+			<preferability>MealLavish</preferability>
+			<tasteThought>AteLavishMeal</tasteThought>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 					<hediffDef>SPC_LavishMealSurvivalPack_Hediff</hediffDef>
