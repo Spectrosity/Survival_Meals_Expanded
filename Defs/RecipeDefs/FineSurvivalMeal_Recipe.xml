@@ -65,17 +65,6 @@
 				</filter>
 				<count>0.30</count>
 			</li>
-			<li>
-				<filter>
-					<categories>
-						<li>Leathers</li>
-					</categories>
-					<disallowedThingDefs>
-						<li>Leather_Thrumbo</li>
-					</disallowedThingDefs>
-				</filter>
-				<count>5</count>
-			</li>
 		</ingredients>
 		<products>
 			<SPC_LavishMealSurvivalPack>1</SPC_LavishMealSurvivalPack>
