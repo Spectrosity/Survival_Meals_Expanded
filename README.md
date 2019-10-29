@@ -4,7 +4,8 @@ Survival Meals Expanded, a mod for RimWorld created by Spectrosity and co-edited
 # Changelog
 **v1.1.0.0**
 ```
-Changes_go_here
+--updated recipe defs to properly reflect ingredients
+--added a hediff to packaged meals for lavish and fine
 ```
 **v1.0.0.0**
 ```
