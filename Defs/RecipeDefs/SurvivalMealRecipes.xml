@@ -13,7 +13,9 @@
 		<ingredients>
 			<li>
 				<filter>
-					<thingDefs>MealFine</thingDefs>
+					<thingDefs>
+						<li>MealFine</li>
+					</thingDefs>
 				</filter>
 				<count>1</count>
 			</li>
