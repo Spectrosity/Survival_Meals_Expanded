@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!--===================== Machining and its children sub-tier ======================-->
+
+	<!--===================== Packaged Survival Meals ======================-->
 	<ResearchProjectDef>
-		<defName>SPC_FinePackagedSurvivalMeal</defName>
+		<defName>SPC_ResearchFineMealSurvival</defName>
 		<label>fine packaged survival meal</label>
 		<description>Produce packaged survival meals of higher quality which never go bad. Great for traveling longer distances.</description>
 		<baseCost>650</baseCost>
@@ -13,21 +14,24 @@
 		<researchViewX>8</researchViewX>
 		<researchViewY>1.16</researchViewY>
 	</ResearchProjectDef>
+
 	<ResearchProjectDef>
-		<defName>SPC_LavishPackagedSurvivalMeal</defName>
+		<defName>SPC_ResearchLavishMealSurvival</defName>
 		<label>lavish packaged survival meal</label>
 		<description>Produce packaged survival meals of impeccable quality which never go bad. Great for traveling very long distances.</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>MultiAnalyzer</li>
-			<li>SPC_FinePackagedSurvivalMeal</li>
+			<li>SPC_ResearchFineMealSurvival</li>
 		</prerequisites>
 		<researchViewX>12</researchViewX>
 		<researchViewY>4.4</researchViewY>
 	</ResearchProjectDef>
+	
+	<!--===================== Packaging Station ======================-->
 	<ResearchProjectDef>
-		<defName>SPC_PackagingStation</defName>
+		<defName>SPC_ResearchPackagingStation</defName>
 		<label>Packaging station</label>
 		<description>Build a packaging station used for packaging survival meals into their finished product.</description>
 		<baseCost>1000</baseCost>
@@ -38,4 +42,5 @@
 		<researchViewX>7</researchViewX>
 		<researchViewY>0.5</researchViewY>
 	</ResearchProjectDef>
+
 </Defs>
