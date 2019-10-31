@@ -41,7 +41,9 @@
 		<ingredients>
 			<li>
 				<filter>
-					<thingDefs>MealLavish</thingDefs>
+					<thingDefs>
+						<li>MealLavish</li>
+					</thingDefs>
 				</filter>
 				<count>1</count>
 			</li>
