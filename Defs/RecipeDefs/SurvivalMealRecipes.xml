@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<RecipeDef ParentName="CookMealBase">
+
+	<!--===================== Packaged Survival Meals ======================-->
+	<RecipeDef>
 		<defName>SPC_CookFineMealSurvival</defName>
-		<label>cook fine packaged survival meal</label>
-		<description>Prepare a fine packaged survival meal from a combination of meat and plant ingredients. Less of the ingredients are wasted in the preservation process than a normal survival meal.</description>
-		<jobString>Cooking fine survival meal.</jobString>
+		<label>package fine meal</label>
+		<description>Package a survival meal from a fine meal. This meal will decrease hunger.</description>
+		<jobString>Packaging a fine meal.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
 		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
 		<ingredients>
 			<li>
@@ -17,26 +18,32 @@
 						<li>MealFine</li>
 					</thingDefs>
 				</filter>
-				<count>1</count>
+				<count>.9</count>
 			</li>
 		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MealFine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Cooking</workSkill>
 		<products>
-			<SPC_FineMealSurvivalPack>1</SPC_FineMealSurvivalPack>
+			<SPC_FineMealSurvival>1</SPC_FineMealSurvival>
 		</products>
 		<skillRequirements>
 			<Cooking>9</Cooking>
 		</skillRequirements>
-		<researchPrerequisite>SPC_FinePackagedSurvivalMeal</researchPrerequisite>
+		<researchPrerequisite>SPC_ResearchFineMealSurvival</researchPrerequisite>
 	</RecipeDef>
-	<RecipeDef ParentName="CookMealBase">
+
+	<RecipeDef>
 		<defName>SPC_CookLavishMealSurvival</defName>
-		<label>cook lavish packaged survival meal</label>
-		<description>Prepare a fine packaged survival meal from a combination of meat and plant ingredients. Less of the ingredients are wasted in the preservation process than a normal survival meal.</description>
-		<jobString>Cooking lavish survival meal.</jobString>
+		<label>package lavish meal</label>
+		<description>Package a survival meal from a lavish meal. This meal will decrease hunger and increase blood filtration.</description>
+		<jobString>Packaging a lavish meal.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
 		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
 		<ingredients>
 			<li>
@@ -48,12 +55,59 @@
 				<count>1</count>
 			</li>
 		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MealLavish</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Cooking</workSkill>
 		<products>
-			<SPC_LavishMealSurvivalPack>1</SPC_LavishMealSurvivalPack>
+			<SPC_LavishMealSurvival>1</SPC_LavishMealSurvival>
 		</products>
 		<skillRequirements>
 			<Cooking>10</Cooking>
 		</skillRequirements>
-		<researchPrerequisite>SPC_LavishPackagedSurvivalMeal</researchPrerequisite>
+		<researchPrerequisite>SPC_ResearchLavishMealSurvival</researchPrerequisite>
 	</RecipeDef>
+
+	<!--===================== Packaging Material ======================-->
+
+	<RecipeDef>
+		<defName>SPC_CraftPackagingMaterial</defName>
+		<label>packaging material</label>
+		<description>Crafts packaging material from materials. For use with the packaging station.</description>
+		<jobString>Crafting packaging material.</jobString>
+		<workSpeedStat>TailoringSpeed</workSpeedStat>
+		<effectWorking>Tailor</effectWorking>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<workAmount>500</workAmount>
+		<workSkill>Crafting</workSkill>
+		<recipeUsers>
+			<li>ElectricTailoringBench</li>
+			<li>HandTailoringBench</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Textiles</li>
+					</categories>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Textiles</li>
+			</categories>
+		</fixedIngredientFilter>
+		<products>
+			<SPC_PackagingMaterial>25</SPC_PackagingMaterial>
+		</products>
+		<skillRequirements>
+			<Crafting>5</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>SPC_ResearchPackagingStation</researchPrerequisite>
+	</RecipeDef>
+
 </Defs>

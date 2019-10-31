@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+	<!--===================== Packaging Station ======================-->
 	<ThingDef ParentName="BuildingBase">
 		<defName>SPC_PackagingStation</defName>
 		<label>Packaging Station</label>
@@ -30,16 +32,6 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<fillPercent>0.5</fillPercent>
 		<useHitPoints>True</useHitPoints>
-		<designationCategory>Production</designationCategory>
-		<size>(1,1)</size>
-		<passability>PassThroughOnly</passability>
-		<pathCost>70</pathCost>
-		<rotatable>false</rotatable>
-		<tickerType>Normal</tickerType>
-		<hasInteractionCell>True</hasInteractionCell>
-		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
-		<surfaceType>Item</surfaceType>
-		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<statBases>
 			<WorkToBuild>1800</WorkToBuild>
 			<MaxHitPoints>145</MaxHitPoints>
@@ -47,25 +39,36 @@
 			<Cleanliness>-10</Cleanliness>
 			<Mass>10</Mass>
 		</statBases>
-		<inspectorTabs>
-			<li>ITab_Bills</li>
-		</inspectorTabs>
+		<size>(1,1)</size>
+		<designationCategory>Production</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<recipes>
 			<li>CookMealSurvival</li>
 			<li>SPC_CookFineMealSurvival</li>
 			<li>SPC_CookLavishMealSurvival</li>
 		</recipes>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
 		<comps>
-			<li Class="CompProperties_Forbiddable" />
-			<li Class="CompProperties_Breakdownable" />
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>true</shortCircuitInRain>
 				<basePowerConsumption>125</basePowerConsumption>
 			</li>
+			<li Class="CompProperties_Breakdownable" />
+			<li Class="CompProperties_Flickable" />
+			<li Class="CompProperties_Forbiddable" />
 			<li Class="CompProperties_Refuelable">
-				<fuelConsumptionRate>50</fuelConsumptionRate>
-				<fuelCapacity>100.0</fuelCapacity>
+				<fuelConsumptionRate>80</fuelConsumptionRate>
+				<fuelCapacity>50.0</fuelCapacity>
 				<fuelFilter>
 					<thingDefs>
 						<li>SPC_PackagingMaterial</li>
@@ -79,7 +82,8 @@
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
 		<researchPrerequisites>
-			<li>SPC_PackagingStation</li>
+			<li>SPC_ResearchPackagingStation</li>
 		</researchPrerequisites>
 	</ThingDef>
+
 </Defs>

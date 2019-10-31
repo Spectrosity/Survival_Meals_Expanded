@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+   <!--===================== Vanilla ======================-->
+   <Operation Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+         <!--RecipeDef-->
+         <li Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="CookMealSurvival"]/label</xpath>
+            <value>
+               <label>package simple meal</label>
+            </value>
+         </li>
+         <li Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="CookMealSurvival"]/description</xpath>
+            <value>
+               <description>Package a survival meal from a simple meal.</description>
+            </value>
+         </li>
+         <li Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="CookMealSurvival"]/jobString</xpath>
+            <value>
+               <jobString>Packaging a simple meal.</jobString>
+            </value>
+         </li>
+         <li Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="CookMealSurvival"]/ingredients</xpath>
+            <value>
+               <ingredients>
+                  <li>
+                     <filter>
+                        <thingDefs>
+                           <li>MealSimple</li>
+                        </thingDefs>
+                     </filter>
+                     <count>.9</count>
+                  </li>
+               </ingredients>
+            </value>
+         </li>
+         <li Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookMealSurvival"]</xpath>
+            <value>
+               <fixedIngredientFilter>
+                  <thingDefs>
+                     <li>MealSimple</li>
+                  </thingDefs>
+               </fixedIngredientFilter>
+            </value>
+         </li>
+         <li Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookMealSurvival"]</xpath>
+            <value>
+               <workSkill>Cooking</workSkill>
+            </value>
+         </li>
+         <li Class="PatchOperationAttributeRemove">
+            <xpath>Defs/RecipeDef[defName="CookMealSurvival"]</xpath>
+            <attribute>ParentName</attribute>
+         </li>
+         <!--ResearchProjectDef-->
+         <li Class="PatchOperationReplace">
+            <xpath>Defs/ResearchProjectDef[defName="PackagedSurvivalMeal"]/prerequisites/li[.="NutrientPaste"]</xpath>
+            <value>
+               <li>SPC_ResearchPackagingStation</li>
+            </value>
+         </li>
+         <!--ThingDef-->
+         <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="MealSurvivalPack"]/statBases/WorkToMake</xpath>
+            <value>
+               <WorkToMake>60</WorkToMake>
+            </value>
+         </li>
+         <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="MealSurvivalPack"]/statBases/MarketValue</xpath>
+            <value>
+               <MarketValue>30</MarketValue>
+            </value>
+         </li>
+      </operations>
+   </Operation>
+
+</Patch>
