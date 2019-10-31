@@ -4,10 +4,11 @@
 		<defName>SPC_PackagingStation</defName>
 		<label>Packaging Station</label>
 		<description>A vacuum sealing machine used to make packaged survival meals. Very loud.</description>
+		<thingClass>Building_WorkTable</thingClass>
 		<graphicData>
-			<texPath>Things/Building/SPC_PackagingStation</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(2,2)</drawSize>
+			<texPath>Things/Building/SPC_PackagingStation/SPC_PackagingStation</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1.5,2)</drawSize>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
 				<cornerTR>Damage/Corner</cornerTR>
@@ -33,8 +34,8 @@
 		<size>(1,1)</size>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
-		<rotatable>true</rotatable>
-		<tickerType>Rare</tickerType>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
 		<hasInteractionCell>True</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
@@ -44,11 +45,16 @@
 			<MaxHitPoints>145</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 			<Cleanliness>-10</Cleanliness>
-			<Mass>3</Mass>
+			<Mass>10</Mass>
 		</statBases>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
 		</inspectorTabs>
+		<recipes>
+			<li>CookMealSurvival</li>
+			<li>SPC_CookFineMealSurvival</li>
+			<li>SPC_CookLavishMealSurvival</li>
+		</recipes>
 		<comps>
 			<li Class="CompProperties_Forbiddable" />
 			<li Class="CompProperties_Breakdownable" />
@@ -62,12 +68,16 @@
 				<fuelCapacity>100.0</fuelCapacity>
 				<fuelFilter>
 					<thingDefs>
-						<li>SPC_MealPackagingMaterial</li>
+						<li>SPC_PackagingMaterial</li>
 					</thingDefs>
 				</fuelFilter>
-				<consumerFuelOnlyWhenUsed>true</consumerFuelOnlyWhenUsed>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
 			</li>
 		</comps>
+		<building>
+			<isMealSource>true</isMealSource>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		</building>
 		<researchPrerequisites>
 			<li>SPC_PackagingStation</li>
 		</researchPrerequisites>
