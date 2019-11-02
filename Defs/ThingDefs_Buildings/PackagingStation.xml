@@ -46,7 +46,7 @@
 		<hasInteractionCell>True</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
-		<rotatable>false</rotatable>
+		<rotatable>true</rotatable>
 		<tickerType>Normal</tickerType>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<recipes>
