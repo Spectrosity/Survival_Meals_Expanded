@@ -24,6 +24,9 @@
                <jobString>Packaging a simple meal.</jobString>
             </value>
          </li>
+         <li Class="PatchOperationRemove">
+            <xpath>Defs/RecipeDef[defName="CookMealSurvival"]/ingredientValueGetterClass</xpath>
+         </li>
          <li Class="PatchOperationReplace">
             <xpath>Defs/RecipeDef[defName="CookMealSurvival"]/ingredients</xpath>
             <value>
@@ -34,7 +37,7 @@
                            <li>MealSimple</li>
                         </thingDefs>
                      </filter>
-                     <count>.9</count>
+                     <count>1</count>
                   </li>
                </ingredients>
             </value>
@@ -70,13 +73,13 @@
          <li Class="PatchOperationReplace">
             <xpath>Defs/ThingDef[defName="MealSurvivalPack"]/statBases/WorkToMake</xpath>
             <value>
-               <WorkToMake>60</WorkToMake>
+               <WorkToMake>120</WorkToMake>
             </value>
          </li>
          <li Class="PatchOperationReplace">
             <xpath>Defs/ThingDef[defName="MealSurvivalPack"]/statBases/MarketValue</xpath>
             <value>
-               <MarketValue>30</MarketValue>
+               <MarketValue>18</MarketValue>
             </value>
          </li>
       </operations>
