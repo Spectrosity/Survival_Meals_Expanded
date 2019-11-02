@@ -70,8 +70,8 @@
 		<graphicData>
 			<texPath>Things/Item/Resource/SPC_PackagingMaterial</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(178,136,59)</color>
 		</graphicData>
-		<color>(178,136,59)</color>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
 			<MarketValue>1.5</MarketValue>
