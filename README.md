@@ -7,7 +7,6 @@ Survival Meals Expanded, a mod for RimWorld created by Spectrosity and co-edited
 --added packaging station
 --survival meals are now made with regular meals at a packaging station
 --added packaging material
---
 ```
 **v1.1.0.0**
 ```
