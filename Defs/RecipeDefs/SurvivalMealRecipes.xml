@@ -74,7 +74,7 @@
 
 	<RecipeDef>
 		<defName>SPC_CraftPackagingMaterial</defName>
-		<label>packaging material</label>
+		<label>Make packaging material</label>
 		<description>Crafts packaging material from materials. For use with the packaging station.</description>
 		<jobString>Crafting packaging material.</jobString>
 		<workSpeedStat>TailoringSpeed</workSpeedStat>

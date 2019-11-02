@@ -82,6 +82,9 @@
 		<thingCategories>
 			<li>Textiles</li>
 		</thingCategories>
+		<researchPrerequisites>
+			<li>SPC_ResearchPackagingStation</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 </Defs>

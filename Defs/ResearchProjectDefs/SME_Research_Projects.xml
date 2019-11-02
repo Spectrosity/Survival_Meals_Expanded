@@ -33,7 +33,7 @@
 	<ResearchProjectDef>
 		<defName>SPC_ResearchPackagingStation</defName>
 		<label>Packaging station</label>
-		<description>Build a packaging station used for packaging survival meals into their finished product.</description>
+		<description>Build a packaging station and make packaging material used for packaging survival meals into their finished product.</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
