@@ -2,15 +2,19 @@
 <Defs>
 
 	<!--===================== Packaged Survival Meals ======================-->
-	<RecipeDef>
+
+	<RecipeDef Name="MealSurvivalRecipeBase" Abstract="True">
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef ParentName="MealSurvivalRecipeBase">
 		<defName>SPC_CookFineMealSurvival</defName>
 		<label>package fine meal</label>
 		<description>Package a survival meal from a fine meal. This meal will decrease hunger.</description>
 		<jobString>Packaging a fine meal.</jobString>
-		<workSpeedStat>CookSpeed</workSpeedStat>
-		<effectWorking>Cook</effectWorking>
-		<soundWorking>Recipe_CookMeal</soundWorking>
-		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
 		<ingredients>
 			<li>
 				<filter>
@@ -18,7 +22,7 @@
 						<li>MealFine</li>
 					</thingDefs>
 				</filter>
-				<count>.9</count>
+				<count>1</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -26,7 +30,6 @@
 				<li>MealFine</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-		<workSkill>Cooking</workSkill>
 		<products>
 			<SPC_FineMealSurvival>1</SPC_FineMealSurvival>
 		</products>
@@ -36,15 +39,11 @@
 		<researchPrerequisite>SPC_ResearchFineMealSurvival</researchPrerequisite>
 	</RecipeDef>
 
-	<RecipeDef>
+	<RecipeDef ParentName="MealSurvivalRecipeBase">
 		<defName>SPC_CookLavishMealSurvival</defName>
 		<label>package lavish meal</label>
 		<description>Package a survival meal from a lavish meal. This meal will decrease hunger and increase blood filtration.</description>
 		<jobString>Packaging a lavish meal.</jobString>
-		<workSpeedStat>CookSpeed</workSpeedStat>
-		<effectWorking>Cook</effectWorking>
-		<soundWorking>Recipe_CookMeal</soundWorking>
-		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
 		<ingredients>
 			<li>
 				<filter>
@@ -60,7 +59,6 @@
 				<li>MealLavish</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-		<workSkill>Cooking</workSkill>
 		<products>
 			<SPC_LavishMealSurvival>1</SPC_LavishMealSurvival>
 		</products>

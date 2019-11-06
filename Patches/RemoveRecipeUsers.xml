@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<!--===================== Vanilla ======================-->
+   <!--===================== Vanilla ======================-->
    <Operation Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
@@ -9,6 +9,51 @@
             <xpath>Defs/RecipeDef[defName="ElectricStove" or defName="FueledStove"]/recipes/li/CookMealSurvival</xpath>
          </li>
       </operations>
+   </Operation>
+   
+   <!--===================== GloomyFurniture ======================-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>GloomyFurniture</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationRemove">
+               <xpath>Defs/RecipeDef[defName="CookMealSurvivalD"]</xpath>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--===================== VFE-Production ======================-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Furniture Expanded - Production</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationRemove">
+               <xpath>Defs/RecipeDef[defName="VFE_TableStoveLarge"]/recipes/li/VFE_CookBulkSurvival</xpath>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--===================== VGP ======================-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>VGP Vegetable Garden</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationRemove">
+               <xpath>Defs/RecipeDef[defName="CookBulkMealSurvival"]/recipeUsers</xpath>
+            </li>
+         </operations>
+      </match>
    </Operation>
 
 </Patch>

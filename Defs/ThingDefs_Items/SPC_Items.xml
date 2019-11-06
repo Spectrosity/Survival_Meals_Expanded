@@ -12,9 +12,9 @@
 		</graphicData>
 		<statBases>
 			<DeteriorationRate>0.25</DeteriorationRate>
-			<MarketValue>50</MarketValue>
+			<MarketValue>25</MarketValue>
 			<Mass>0.3</Mass>
-			<WorkToMake>60</WorkToMake>
+			<WorkToMake>120</WorkToMake>
 			<Nutrition>0.95</Nutrition>
 		</statBases>
 		<ingestible>
@@ -42,9 +42,9 @@
 		</graphicData>
 		<statBases>
 			<DeteriorationRate>0.20</DeteriorationRate>
-			<MarketValue>60</MarketValue>
+			<MarketValue>50</MarketValue>
 			<Mass>0.3</Mass>
-			<WorkToMake>60</WorkToMake>
+			<WorkToMake>120</WorkToMake>
 			<Nutrition>1</Nutrition>
 		</statBases>
 		<ingestible>
@@ -75,7 +75,7 @@
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
 			<MarketValue>1.5</MarketValue>
-			<Mass>0.04</Mass>
+			<Mass>0.2</Mass>
 			<Flammability>1.0</Flammability>
 			<DeteriorationRate>3</DeteriorationRate>
 		</statBases>
