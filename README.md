@@ -12,6 +12,7 @@ Survival meals are made with their respective non-packaged meals. Simple meals m
 **v1.2.1.0**
 ```
 --rebalanced recipes (new work amounts, market values, and item mass)
+--mod patches added for: Vegetable Garden Project, Vanilla Furniture Expanded - Production, GloomyFurniture
 ```
 **v1.2.0.0**
 ```
