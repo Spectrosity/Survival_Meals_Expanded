@@ -6,7 +6,7 @@
       <success>Always</success>
       <operations>
          <li Class="PatchOperationRemove">
-            <xpath>Defs/RecipeDef[defName="ElectricStove" or defName="FueledStove"]/recipes/li/CookMealSurvival</xpath>
+            <xpath>Defs/ThingDef[defName="ElectricStove" or defName="FueledStove"]/recipes/li[.="CookMealSurvival"]</xpath>
          </li>
       </operations>
    </Operation>
@@ -35,7 +35,7 @@
          <success>Always</success>
          <operations>
             <li Class="PatchOperationRemove">
-               <xpath>Defs/RecipeDef[defName="VFE_TableStoveLarge"]/recipes/li/VFE_CookBulkSurvival</xpath>
+               <xpath>Defs/ThingDef[defName="VFE_TableStoveLarge"]/recipes/li[.="VFE_CookBulkSurvival"]</xpath>
             </li>
          </operations>
       </match>
