@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Manifest>
+
+  <version>1.2.1.0</version>
+  <showCrossPromotions>true</showCrossPromotions>
+  <manifestUri>https://raw.githubusercontent.com/Spectrosity/Survival_Meals_Expanded/master/About/Manifest.xml</manifestUri>
+  <downloadUri>https://github.com/Spectrosity/Survival_Meals_Expanded/releases</downloadUri>
+
+</Manifest>

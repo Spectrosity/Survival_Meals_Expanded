@@ -2,15 +2,50 @@
 <Defs>
 
 	<!--===================== Packaged Survival Meals ======================-->
-	<RecipeDef>
+
+	<RecipeDef Name="MealSurvivalRecipeBase" Abstract="True">
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workSkill>Cooking</workSkill>
+		<workAmount>120</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="MealSurvivalRecipeBase">
+		<defName>CookMealSurvivalBulk</defName>
+		<label>package simple meal bulk</label>
+		<description>Package survival meals from simple meals in bulk.</description>
+		<jobString>Packaging simple meals.</jobString>
+		<workAmount>900</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MealSimple</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MealSimple</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<MealSurvivalPack>10</MealSurvivalPack>
+		</products>
+		<skillRequirements>
+			<Cooking>9</Cooking>
+		</skillRequirements>
+		<researchPrerequisite>PackagedSurvivalMeal</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef ParentName="MealSurvivalRecipeBase">
 		<defName>SPC_CookFineMealSurvival</defName>
 		<label>package fine meal</label>
 		<description>Package a survival meal from a fine meal. This meal will decrease hunger.</description>
 		<jobString>Packaging a fine meal.</jobString>
-		<workSpeedStat>CookSpeed</workSpeedStat>
-		<effectWorking>Cook</effectWorking>
-		<soundWorking>Recipe_CookMeal</soundWorking>
-		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
 		<ingredients>
 			<li>
 				<filter>
@@ -18,7 +53,7 @@
 						<li>MealFine</li>
 					</thingDefs>
 				</filter>
-				<count>.9</count>
+				<count>1</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -26,7 +61,6 @@
 				<li>MealFine</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-		<workSkill>Cooking</workSkill>
 		<products>
 			<SPC_FineMealSurvival>1</SPC_FineMealSurvival>
 		</products>
@@ -36,15 +70,41 @@
 		<researchPrerequisite>SPC_ResearchFineMealSurvival</researchPrerequisite>
 	</RecipeDef>
 
-	<RecipeDef>
+	<RecipeDef ParentName="MealSurvivalRecipeBase">
+		<defName>SPC_CookFineMealSurvivalBulk</defName>
+		<label>package fine meal bulk</label>
+		<description>Package survival meals from fine meals in bulk. These meals will decrease hunger.</description>
+		<jobString>Packaging fine meals.</jobString>
+		<workAmount>900</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MealFine</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MealFine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SPC_FineMealSurvival>10</SPC_FineMealSurvival>
+		</products>
+		<skillRequirements>
+			<Cooking>10</Cooking>
+		</skillRequirements>
+		<researchPrerequisite>SPC_ResearchFineMealSurvival</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef ParentName="MealSurvivalRecipeBase">
 		<defName>SPC_CookLavishMealSurvival</defName>
 		<label>package lavish meal</label>
 		<description>Package a survival meal from a lavish meal. This meal will decrease hunger and increase blood filtration.</description>
 		<jobString>Packaging a lavish meal.</jobString>
-		<workSpeedStat>CookSpeed</workSpeedStat>
-		<effectWorking>Cook</effectWorking>
-		<soundWorking>Recipe_CookMeal</soundWorking>
-		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
 		<ingredients>
 			<li>
 				<filter>
@@ -60,12 +120,41 @@
 				<li>MealLavish</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-		<workSkill>Cooking</workSkill>
 		<products>
 			<SPC_LavishMealSurvival>1</SPC_LavishMealSurvival>
 		</products>
 		<skillRequirements>
 			<Cooking>10</Cooking>
+		</skillRequirements>
+		<researchPrerequisite>SPC_ResearchLavishMealSurvival</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef ParentName="MealSurvivalRecipeBase">
+		<defName>SPC_CookLavishMealSurvivalBulk</defName>
+		<label>package lavish meal bulk</label>
+		<description>Package survival meals from lavish meals in bulk. These meals will decrease hunger and increase blood filtration.</description>
+		<jobString>Packaging lavish meals.</jobString>
+		<workAmount>900</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MealLavish</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MealLavish</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SPC_LavishMealSurvival>10</SPC_LavishMealSurvival>
+		</products>
+		<skillRequirements>
+			<Cooking>11</Cooking>
 		</skillRequirements>
 		<researchPrerequisite>SPC_ResearchLavishMealSurvival</researchPrerequisite>
 	</RecipeDef>
