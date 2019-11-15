@@ -12,7 +12,7 @@
 	</RecipeDef>
 
 	<RecipeDef ParentName="MealSurvivalRecipeBase">
-		<defName>CookMealSurvivalBulk</defName>
+		<defName>SPC_CookMealSurvivalBulk</defName>
 		<label>package simple meal bulk</label>
 		<description>Package survival meals from simple meals in bulk.</description>
 		<jobString>Packaging simple meals.</jobString>
