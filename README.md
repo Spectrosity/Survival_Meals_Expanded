@@ -7,10 +7,11 @@ Packaged survival meals now require a packaging station to be made. This workben
 Survival meals are made with their respective non-packaged meals. Simple meals make packaged survival meals, fine meals make fine survival meals, and lavish meals make lavish survival meals. That's a lot of meals!
 
 # Changelog
-**v1.2.1.0**
+**v1.3.0.0**
 ```
 --rebalanced recipes (new work amounts, market values, and item mass)
 --mod patches added for: Vegetable Garden Project, Vanilla Furniture Expanded - Production, GloomyFurniture
+--added bulk meal production
 ```
 **v1.2.0.0**
 ```
