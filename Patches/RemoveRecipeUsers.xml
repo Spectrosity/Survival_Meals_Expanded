@@ -1,59 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-   <!--===================== Vanilla ======================-->
+   <!--===================== Recipe Removal ======================-->
    <Operation Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
+         <!--===Remove all known survival meal recipes. In respective order: Vanilla, Vanilla Furniture Expanded - Production, VGP Vegetable Garden, GloomyFurniture===-->
          <li Class="PatchOperationRemove">
-            <xpath>Defs/ThingDef[defName="ElectricStove" or defName="FueledStove"]/recipes/li[.="CookMealSurvival"]</xpath>
+            <xpath>Defs/ThingDef/recipes//li[
+               text()="CookMealSurvival" or 
+               text()="VFE_CookBulkSurvival"] 
+               | 
+               Defs/RecipeDef[
+               defName="CookBulkMealSurvival" or 
+               defName="CookMealSurvivalD"]/*/..
+            </xpath>
+         </li>
+         <!--===Re-Add removed survival meal recipe to packaging station===-->
+         <li Class="PatchOperationInsert">
+            <xpath>Defs/ThingDef[defName="SPC_PackagingStation"]/recipes/li[1]</xpath>
+            <value>
+               <li>CookMealSurvival</li>
+            </value>
          </li>
       </operations>
-   </Operation>
-   
-   <!--===================== GloomyFurniture ======================-->
-   <Operation Class="PatchOperationFindMod">
-      <mods>
-         <li>GloomyFurniture</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-         <success>Always</success>
-         <operations>
-            <li Class="PatchOperationRemove">
-               <xpath>Defs/RecipeDef[defName="CookMealSurvivalD"]</xpath>
-            </li>
-         </operations>
-      </match>
-   </Operation>
-
-   <!--===================== VFE-Production ======================-->
-   <Operation Class="PatchOperationFindMod">
-      <mods>
-         <li>Vanilla Furniture Expanded - Production</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-         <success>Always</success>
-         <operations>
-            <li Class="PatchOperationRemove">
-               <xpath>Defs/ThingDef[defName="VFE_TableStoveLarge"]/recipes/li[.="VFE_CookBulkSurvival"]</xpath>
-            </li>
-         </operations>
-      </match>
-   </Operation>
-
-   <!--===================== VGP ======================-->
-   <Operation Class="PatchOperationFindMod">
-      <mods>
-         <li>VGP Vegetable Garden</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-         <success>Always</success>
-         <operations>
-            <li Class="PatchOperationRemove">
-               <xpath>Defs/RecipeDef[defName="CookBulkMealSurvival"]/recipeUsers</xpath>
-            </li>
-         </operations>
-      </match>
    </Operation>
 
 </Patch>
