@@ -2,9 +2,11 @@
 <ModMetaData>
 	<name>Survival Meals Expanded</name>
 	<author>Spectrosity | Dr_Zhivago</author>
-	<url />
+	<url>https://github.com/Spectrosity/Survival_Meals_Expanded</url>
 	<supportedVersions>
 		<li>1.0</li>
-	</supportedVersions>
+		<li>1.1</li>
+	</supportedVersions>	
+	<packageId>spectrosity.drzhivago.survivalmealsexpanded</packageId>
 	<description>Adds more vanilla-friendly survival meals which are progressively more nutritious. Obtained through research projects and crafted at packaging station.</description>
 </ModMetaData>

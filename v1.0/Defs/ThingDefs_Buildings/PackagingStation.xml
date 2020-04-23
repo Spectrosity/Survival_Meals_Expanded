@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!--===================== Packaging Station ======================-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>SPC_PackagingStation</defName>
+		<label>Packaging Station</label>
+		<description>A vacuum sealing machine used to make packaged survival meals. Very loud.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<graphicData>
+			<texPath>Things/Building/SPC_PackagingStation/SPC_PackagingStation</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1.5,2)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<costList>
+			<Steel>125</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<constructEffect>ConstructMetal</constructEffect>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>1800</WorkToBuild>
+			<MaxHitPoints>145</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Cleanliness>-10</Cleanliness>
+			<Mass>10</Mass>
+		</statBases>
+		<size>(1,1)</size>
+		<designationCategory>Production</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<rotatable>true</rotatable>
+		<tickerType>Normal</tickerType>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<recipes>
+			<li>CookMealSurvival</li>
+			<li>SPC_CookMealSurvivalBulk</li>
+			<li>SPC_CookFineMealSurvival</li>
+			<li>SPC_CookFineMealSurvivalBulk</li>
+			<li>SPC_CookLavishMealSurvival</li>
+			<li>SPC_CookLavishMealSurvivalBulk</li>
+		</recipes>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>125</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Breakdownable" />
+			<li Class="CompProperties_Flickable" />
+			<li Class="CompProperties_Forbiddable" />
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>80</fuelConsumptionRate>
+				<fuelCapacity>50.0</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>SPC_PackagingMaterial</li>
+					</thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+			</li>
+		</comps>
+		<building>
+			<isMealSource>true</isMealSource>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		</building>
+		<researchPrerequisites>
+			<li>SPC_ResearchPackagingStation</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+</Defs>
